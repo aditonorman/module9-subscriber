@@ -15,3 +15,11 @@ This is a connection string for connecting to an AMQP broker (like RabbitMQ):
     - `5672` is the default **port number** used by AMQP for connections.
 
 In summary, `guest:guest@localhost:5672` tells the system to connect to a RabbitMQ server running locally, using the default credentials (`guest`/`guest`) on port 5672.
+
+## Simulation slow subscriber screenshot :
+
+![img.png](img.png)
+
+In my case, the total number of queued messages reached **1**, as shown in the chart. This means the publisher briefly outpaced the subscriber, and messages were buffered in the queue. After processing, the queue returned to zero, confirming that all events were eventually consumed.
+
+This test demonstrates how message queues decouple producer-consumer speed and ensure reliable delivery even under varying processing loads.
