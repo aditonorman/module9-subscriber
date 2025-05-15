@@ -15,7 +15,7 @@ impl MessageHandler<UserCreatedEventMessage> for UserCreatedHandler {
         let _ten_millis = time::Duration::from_millis(1000);
         let _now = time::Instant::now();
 
-        println!("In Ade’s Computer [129500004y]. Message received: {:?}", message);
+        println!("In Dito’s Computer [2306256450]. Message received: {:?}", message);
         Ok(())
     }
 
